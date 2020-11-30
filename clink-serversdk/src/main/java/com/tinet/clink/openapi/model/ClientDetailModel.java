@@ -113,6 +113,11 @@ public class ClientDetailModel {
      */
     private Integer chatLimitNum;
 
+    /**
+     * 关闭工单权限 0：没有关闭工单的权限 1：有关闭工单的权限
+     */
+    private Integer closeTicket;
+
 
     public String getCno() {
         return cno;
@@ -274,6 +279,13 @@ public class ClientDetailModel {
         this.chatLimitNum = chatLimitNum;
     }
 
+    public Integer getCloseTicket() {
+        return closeTicket;
+    }
+
+    public void setCloseTicket(Integer closeTicket) {
+        this.closeTicket = closeTicket;
+    }
 
     @Override
     public String toString() {
@@ -298,6 +310,7 @@ public class ClientDetailModel {
                 ", type=" + type +
                 ", chatLimit=" + chatLimit +
                 ", chatLimitNum=" + chatLimitNum +
+                ", closeTicket=" + closeTicket +
                 '}';
     }
 }

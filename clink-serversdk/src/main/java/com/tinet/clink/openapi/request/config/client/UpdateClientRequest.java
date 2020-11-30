@@ -116,6 +116,11 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
      */
     private Integer chatLimitNum;
 
+    /**
+     * 关闭工单权限 0：没有关闭工单的权限 1：有关闭工单的权限
+     */
+    private Integer closeTicket;
+
     public Integer getChatLimit() {
         return chatLimit;
     }
@@ -322,6 +327,17 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
         this.permission = permission;
         if (permission != null) {
             putBodyParameter("permission", permission);
+        }
+    }
+
+    public Integer getCloseTicket() {
+        return closeTicket;
+    }
+
+    public void setCloseTicket(Integer closeTicket) {
+        this.closeTicket = closeTicket;
+        if (closeTicket != null) {
+            putBodyParameter("closeTicket", closeTicket);
         }
     }
 
